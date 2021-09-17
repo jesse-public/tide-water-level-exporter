@@ -12,7 +12,8 @@ logging.basicConfig(
   ])
 
 STATION_ID = 9447130 # Seattle
-URL = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station={}&product=water_level&datum=STND&time_zone=gmt&units=english&format=json".format(STATION_ID)
+DATUM = "MLLW"
+URL = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station={}&product=water_level&datum={}&time_zone=gmt&units=english&format=json".format(STATION_ID, DATUM)
 MEASURE_INTERVAL = 5 * 60
 LISTEN_PORT = 9785
 
